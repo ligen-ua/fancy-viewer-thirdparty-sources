@@ -1,0 +1,15 @@
+diff --git a/src/Project.cpp b/src/Project.cpp
+index f4efa64..c40893f 100644
+--- a/src/Project.cpp
++++ b/src/Project.cpp
+@@ -51,7 +51,9 @@ const wstring Project::configurationType() const
+ 
+ const wstring Project::defines() const
+ {
+-  wstring defines=L"_WIN32_WINNT=_WIN32_WINNT_WIN10";
++  // fancy-viewer: Windows 7 floor. cairo needs Win10 SDK declarations (DirectWrite, MTA usage) but loads
++  // those APIs at runtime; check_binary.py verifies the DLL has no static Win8+ imports.
++  wstring defines=name() == L"cairo" ? L"_WIN32_WINNT=_WIN32_WINNT_WIN10" : L"_WIN32_WINNT=_WIN32_WINNT_WIN7";
+ 
+   if (_options.includeIncompatibleLicense)
+     defines+=L";MAGICK_INCLUDE_INCOMPATIBLE_LICENSE";

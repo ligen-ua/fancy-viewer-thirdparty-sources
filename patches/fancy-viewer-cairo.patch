@@ -1,0 +1,14 @@
+diff --git a/src/win32/cairo-win32-thread-data.c b/src/win32/cairo-win32-thread-data.c
+index 914144d..959110e 100644
+--- a/src/win32/cairo-win32-thread-data.c
++++ b/src/win32/cairo-win32-thread-data.c
+@@ -41,7 +41,8 @@
+ #include <malloc.h>
+ #include <assert.h>
+ 
+-#if (defined (__GNUC__) && !defined (__clang__))
++/* fancy-viewer: MSVC < 17.8 has no C11 _Thread_local, use the TlsAlloc path there too. */
++#if (defined (__GNUC__) && !defined (__clang__)) || (defined (_MSC_VER) && _MSC_VER < 1938)
+     /* Prefer explicit TLS for mingw-w64 GCC — EmuTLS has
+      * some issues and adds a dependency on libwinpthreads:
+      *
