@@ -4,6 +4,8 @@ Each Fancy Viewer version ships the LGPL/MPL libraries of one sources release. F
 
 | Fancy Viewer | Sources release | Manifest | Recorded |
 |---|---|---|---|
+| 1.8.0.43 | [sources-1](https://github.com/ligen-ua/fancy-viewer-thirdparty-sources/releases/tag/sources-1) | [sources-1.md](sources/sources-1.md) | 2026-11-23 |
+| 1.8.0.42 | [sources-1](https://github.com/ligen-ua/fancy-viewer-thirdparty-sources/releases/tag/sources-1) | [sources-1.md](sources/sources-1.md) | 2026-11-23 |
 | 1.8.0.41 | [sources-1](https://github.com/ligen-ua/fancy-viewer-thirdparty-sources/releases/tag/sources-1) | [sources-1.md](sources/sources-1.md) | 2026-11-20 |
 | 1.8.0.40 | [sources-1](https://github.com/ligen-ua/fancy-viewer-thirdparty-sources/releases/tag/sources-1) | [sources-1.md](sources/sources-1.md) | 2026-11-20 |
 | 1.8.0.39 | [sources-1](https://github.com/ligen-ua/fancy-viewer-thirdparty-sources/releases/tag/sources-1) | [sources-1.md](sources/sources-1.md) | 2026-11-19 |
